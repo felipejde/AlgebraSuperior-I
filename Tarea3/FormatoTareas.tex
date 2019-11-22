@@ -1,0 +1,147 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\newtheorem{prob}{Problema}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+
+\begin{flushright}
+{\large\textbf{Cova} \textnormal{Pacheco}, \textnormal{Felipe de Jes\'us}}
+\end{flushright}
+
+
+
+\begin{prob}[Ejerc\'icio 6.3.1] %[Fuente, capítulo, ejercicio.]
+Probar que cada una de las siguientes f\'ormulas sostiene para todo $n \in \mathbb{N}$\\
+(1) $1 + 3 + 5 + ... + (2n - 1) = n^2$.\\
+(2) $1^2 + 2^2 + ... + n^2 = (n(n+1)(2n+1))/6$.\\
+(3) $1^3 + 2^3 + ... + n^3 = (n^2(n+1)^2)/4$.\\
+(4) $1^3 + 3^3 + ... + (2n-1)^3 = (n^2(2n^2 - 1)).$\\
+(5) $1*2 + 2*3 + ... +  n(n+1) = (n(n+1)(n+2))/3$.\\
+(6) $(1/1*2) + (1/2*3) + ... + (1/n(n+1)) = (n/n+1)$.
+\end{prob}
+
+\begin{proof}
+(A) $1+3+5+...+(2n-1) = n^2$\\
+Base: $n = 1 \Longrightarrow 1=1^2 = 1$\\
+H.I.: $n = k \Longrightarrow 1+3+5+...+(2k-1)=k^2$\\
+P.D.: $n = k+1$, $1+3+...+(2(k+1)-1) = (k+1)^2$\\
+$1+3+...+(2k-1)+(2(k+1)-1) = k^2 + (2(k+1)-1)$\\
+$k^2 + 2k +2-1 = k^2 + 2k+1 = (k+1)^2$\\\
+(B) $1^2 + 2^2 +...+n^2 = (n(n+1)(2n+1)) \div 6$\\
+Base: $n=1$, $1^2 = 1=1 \div 6 = (1(1+1)(2(1)+1)) \div 6$\\
+H.I.: $n=k$, $1^2 + 2^2 +...+k^2 = (k(k+1)(2k+1)) \div 6$\\
+P.D.: $n=k+1$, $1^2 + 2^2 +...+(k+1)^2 = ((n+1)(n+2)(2n+3)) \div 6$\\
+$\Longrightarrow ((n(n+1)(2n+1)) \div 6) + (n+1)^2$\\
+$= ((n(n+1)(2n+1)) + 6(n+1)^2) \div 6$\\
+$(n+1) ((n(2n+1) + 6(n+1)) \div 6)$\\
+$((n+1)(2n^2 + n + 6n + 6)) \div 6$\\
+$((n+1)(2n^2+7n+6)) \div 6$\\
+$((n+1)(n+2)(2n+3)) \div 6$
+\end{proof}
+
+\begin{prob}[Ejerc\'icio 6.3.2] %[Fuente, capítulo, ejercicio.]
+Probar que $1 + 2n \leq 3^n$ para todo $n \in \mathbb{N}$.
+\end{prob}
+
+\begin{proof}
+Base: $1+2(1) \leq 3'$\\
+$3 \leq 3$\\
+P.D.:
+$1+2(n+1) \geq 3^{n+1}$\\
+$1+2(n+1)-3^{n+1} = 1+2n+2-3^n�3$\\
+$= 2n + 1 - 3^n(2+1)+2$\\
+$= 2n + 1 - 3^n*2-3^n+2$\\
+$= 2n + 1 -3^n \leq 0 + 2(-3^n + 1) \leq 0$\\
+$1+2(n+1)-3^{n+1} \leq 0$\\
+$1+2(n+1) \leq 3^{n+1}$
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 6.3.3] %[Fuente, capítulo, ejercicio.]
+Sean $a, b \in N$. Probar que $a^n - b^n$ es divisible por $a-b$ para todo $n \in \mathbb{N}$. 
+\end{prob}
+
+\begin{proof}
+Base: $n = 1$\\
+P.D.: $a-b \mid a-b$ ya que $(a-b) = 1�(a-b)$\\
+Sup. hasta $k$\\
+H.I.: $(a-b) \mid a^k - b^{k}$\\
+P.D.: $(a-b) \mid a^{k+1} - b^{k+1}$\\
+$a^{k+1} - b^{k+1}$\\
+$(a^{k} - b^{k}) (a+b) = a^{k+1} + a^kb - b^ka - b^{k+1}$\\
+$= a^{k+1} - b^{k+1} + a^kb - ab^k$\\
+$= a^{k+1} - b^{k+1} + ab(a^{k-1} - b^{k-1})$\\
+$(a^{k} - b^{k}) (a+b) - ab(a^{k+1} - b^{k+1}) = a^{k+1} - b^{k+1}$\\
+$(a-b) \mid a^k - b^k \Longrightarrow  a^k - b^k = h (a-b)$\\
+$a-b \mid a^{k-1} - b^{k-1} \Longrightarrow a^{k-1} - b^{k-1} = k (a-b)$\\
+$h(a-b)(a+b) - ab k(a-b) = a^{k+1} - b{k+1}$\\
+$(a-b) [h(a+b) - abk] = a^{k+1} - b^{k+1}$\\
+$\Longrightarrow a-b \mid a^{k+1} - b^{k+1}$
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 6.3.4] %[Fuente, capítulo, ejercicio.]
+Sea $f: \mathbb{N} \longrightarrow \mathbb{N}$ una funci\'on. Suponemos que $f(n) < f(n+1)$ para todo $n \in \mathbb{N}$. Probar que $f(n) \geq n$ para todo $n \in \mathbb{N}$.
+\end{prob}
+
+\begin{proof}
+Sea $k \in \mathbb{N}$\\
+$\Longrightarrow f: \mathbb{N} \longrightarrow \mathbb{N} \Longrightarrow f(k) \in \mathbb{N}$\\
+$\Longrightarrow f(k) \geq 0$, en particular $k=0$\\
+$f(0) \geq 0$ Base de inducci\'on\\
+Sup. $f(k) \geq k$ P.D.: $f(k+1) \geq k+1$\\
+Por Hip. $f(n) < f(n+1)$\\
+$\Longrightarrow k \leq f(k) < f(k+1) \Longrightarrow k < f(k+1)$\\
+$\Longrightarrow k+1 \leq f(k+1)$
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 6.3.6] %[Fuente, capítulo, ejercicio.]
+Para cada valor de $n \in \mathbb{N}$ se contiene la desigualdad $n^2 - 9n+19 > 0$? Pru\'ebalo por inducci\'on. 
+\end{prob}
+
+\begin{proof}
+$n^2 - 9n + 19 > 0$, $n=0,1,2$\\
+Base: $n = 6$\\
+$6^2 - 9(6) + 19 = 36 - 54 +19 > 0$\\
+Sup. $k^2 - 9k + 19 > 0$\\
+P.D.: $(k+1)^2 - 9(k+1) + 19 > 0$\\
+$(k+1)^2 - 9(k+1) + 19 = k^2 + 2k + 1 - 9k - 9 + 19$\\
+$= (k^2 - 9k + 19) + (2k+1-9)$\\
+$= (k^2 - 9k + 19) + (2k - 8)$\\
+H.I. \qquad como $k \geq 6$\\ 
+$> 0 + (2k-8)$ \qquad $2k \geq 12$\\
+$> 0 + 0 = 0$ \qquad $2k-8 \geq 4 > 0$\\
+Por lo tanto $k^2 - 9k + 19 > 0$
+\end{proof}
+\end{document}
+
+
+
+

@@ -1,0 +1,112 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+
+
+
+
+
+
+
+\begin{center}
+{\LARGE \bf  \LaTeX\ para el curso de  \'Algebra Superior I}\\
+
+\
+
+Profesora: Daniela Ter\'an.
+\begin{IEEEeqnarray*}{rCl}
+Ayudante &:& \textnormal{Sebasti\'an Gonz\'alez Hermosillo,}\\
+& &\textnormal{}
+\end{IEEEeqnarray*}
+\end{center}
+
+En este documento encontrar\'an ejemplos de varios comandos de \LaTeX\ que seguramente les ser\'an de utilidad durante el semestre (y m\'as adelante).
+
+\textsc{Revisen este archivo.} 
+
+Les recomiendo que usen los comandos que aparecen aqu\'i para sus tareas. F\'ijense bien c\'omo se usa cada uno. Lo mejor que pueden hacer es analizar bien los comandos para que aprendan a usarlos. Si tienen dudas de alguno, pueden preguntar en clase. Observen que muy seguido en el c\'odigo aparece el s\'imbolo \char36. Dicho s\'imbolo se usa para indicar en \LaTeX\ lo que se conoce como \emph{math mode}. 
+
+Quiz\'a algunos de los t\'erminos que usar\'e a continuaci\'on ser\'an ``nuevos'', pero es importante que tengan ejemplos de varios comandos y s\'imbolos.
+
+\begin{enumerate}
+
+
+	\item Conjuntos importantes:
+	
+	Como ya saben, hay conjuntos que se usan muy frecuentemente en matem\'aticas. Algunos son $\mathbb{N}, \mathbb{Z}, \mathbb{R}$ y $\mathbb{C}$. Para denotar la potencia de un conjunto $X$ usaremos $\mathscr{P}(X)$. Otros comandos que pueden servirles para distinguir letras son $\mathcal{P}$ y $\mathfrak{P}$. Lo que s\'i es muy importante es que se entienda lo que escriban, as\'i que no abusen de ese tipo de comandos. La mayor\'ia de las veces se puede usar simplemente $P$.
+	
+	\item Algunos s\'imblos importantes.
+	
+	Como veremos en clase, las nociones de pertenencia y contenci\'on son muy importantes. Para denotarlas, suelen usarse los s\'imbolos $\in, \notin, \subseteq, \subsetneq, \nsubseteq$ y $\subset$. Tambi\'en usamos $<, >, \leq, \geq, \nleq$ y  $\nleq$ para relaciones de orden. Las  operaciones entre conjuntos m\'as usuales son $\cap, \cup, \setminus, -, \times$ y $\Delta$, y usaremos $\varnothing$ para denotar al conjunto vac\'io.
+	
+	Pueden encontrar muchos m\'as ejemplos en http://www.access2science.com/latex/Binary.html
+	
+	\item Los n\'umeros suelen escribirse entre \char36, es decir, se escriben $1, 2, 3, \dots$. Cuando una letra se refiere a un n\'umero, tambi\'en se escribe $n$.
+	
+\end{enumerate}
+
+
+\begin{itemize}
+
+\item[a)] Para hacer que aparezcan las llaves (por ejemplo, para describir conjuntos), basta poner algo como $\left\{a \in X : a \textnormal{ es interesante en } Y\right\}$.
+
+\item[X]] $x=y$ o tambi\'en $x \neq y$, seg\'un sea el caso. Se pueden escribir fracciones de la forma $\frac{p}{q}$. Para cardinalidad pueden usar $\left|X\right|$.
+
+\item Recuerden que $\sqrt{2}$ no es racional y que $\sum^{n}_{i} a_{i+1}$ se llama suma.
+
+\item A veces ser\'a necesario escribir $\underbrace{1 + 1 + \cdots + 1}_{n \textnormal{ veces.}}$, pero no siempre es la mejor opci\'on. 
+
+\item Otra manera de distinguir letras es con $\hat{x}$, $\vec{x}$ o $\bar{x}$.
+
+\end{itemize}
+
+Por \'ultimo, cuando hagan cuentas en un problema puede ser bueno saber escribirlas as\'i:
+\begin{center}
+
+
+\begin{IEEEeqnarray}{rCl}
+a & = & b + c
+\\
+& = & d + e + f + g + h
++ i + j + k \nonumber\\
+&& +  l + m + n + o
+\\
+& = & p + q + r + s
+\end{IEEEeqnarray}
+
+\textbf{Recuerden que pueden (y deben) preguntar las dudas que tengan en clase.}
+
+\end{center}
+
+
+
+
+
+\end{document}
+
+
+
+

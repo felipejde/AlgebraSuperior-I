@@ -1,0 +1,489 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\newtheorem{prob}{Problema}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+
+\begin{flushright}
+{\large\textbf{Cova} \textnormal{Pacheco}, \textnormal{Felipe de Jes\'us}}
+\end{flushright}
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.2] %[Fuente, capÃ­tulo, ejercicio.]
+Es cada una de las siguientes relaciones antisim\'etrica, un orden parcial y/o un orden total?\\
+(1) Sea $F$ un conjunto de personas en Francia, y sea $M$ la relaci\'on definida por $x M y$ si y solo si $x$ come m\'as queso anualmente que $y$, para todo $x,y \in F$.\\
+(2) Sea $W$ el conjunto de todas las personas que alguna vez vivieron y alguna vez vivir\'an, y sea $A$ la relaci\'on en $W$ definida por $x A y$ si y solo si $y$ es ancestro de $x$  o si $y = x$, para todo $x,y \in W$.\\
+(3) Sea $T$ el conjunto de todos los tri\'ángulos en el plano, y sea $L$ la relaci\'on en $T$ definida por $s L t$ si y solo si $s$ tiene area menor o igual a $t$, para cualquier tri\'angulo en $s,t \in T$.\\
+(4) Sea $U$ el conjunto de ciudadanos actuales en E.U.A., y sea $Z$ la relaci\'on en $U$ definida por $xZy$ si y solo si el N\'umero de Seguro Social de $x$ es mayor que el N\'umero de Seguro Social de $y$ para toda $x,y \in U$.
+\end{prob}
+
+\begin{proof}
+(1)\\
+$xMy$ si y solo si $x$ come m\'as queso al año que $y$\\
+$xMx$ $x$ come m\'as queso al año que $x$   NO.\\
+$\Longrightarrow$ No es Orden Parcial ni Orden Total (ref).\\\
+
+(2)$ xAy$ si y solo si $x$ es ancestro de $y$ \'o $y = x$\\
+$xAy$ entonces $x = x$ $\Longrightarrow$ es Reflexiva\\
+$xAy$, $yAz$ entonces $x = y$ $\Longrightarrow$ Antisim\'etrica\\
+$xAy$, $yAz$ entonces $xAz$ $\Longrightarrow$ Transitiva\\
+	(a) $x$ es ancestro de $y$, $y$ es ancestro de $z$ $\Longrightarrow$ $xAz$\\
+	(b) $x = z$\\
+	(c) $x$ es ancestro de $y$, $y = z$ $\Longrightarrow$  $xAz$\\
+	(d) T\\
+		$\Longrightarrow$  OP (ref)\\
+		$xAy$ \'o $yAx$\\
+		No es OT\\\
+
+(3) $sZt$ si y s\'olo si $As \leq At$\\
+$sZs \Longrightarrow Reflexivo$\\
+$sZt$, $tZs$ ent. $As \leq At$, $At \leq As$\\
+Pero no es Antisim\'etrico\\
+$\Longrightarrow$ no es Orden Parcial ni Orden Total.\\\
+
+(4) $xZy$ si y s\'olo si nssde $x > $ nssy\\
+$ xZx$ nssx $>$ nssx\\
+$\Longrightarrow$ no es Orden Parcial (ref) ni Orden Total.\\\\\\\\\\\\\\\
+	
+
+\end{proof}
+
+\begin{prob}[Ejerc\'icio 7.4.3] %[Fuente, capÃ­tulo, ejercicio.]
+Sea $A \subset |N$ un subconjunto, y sea $\preceq$ la relaci\'on en $A$ definida por $a \preceq b$ si y solo si $b = a^k$ para alg\'una $k \in |N$, para todo $a,b \in A$.Probar que $(A,\preceq)$ es un COPO. Es $(A,\preceq)$ un conjunto totalmente ordenado?.
+\end{prob}
+
+\begin{proof}
+Transitiva\\
+$a \preceq b$, $b \preceq c$\\
+$a^k = b$, $b^l = c$\\
+$(a^k)^l = c$ $\Longrightarrow$ $a^(k*l)$ $= c$\\
+como $k$ y $l \in N$\\
+entonces $k*l \in N$\\
+Por lo tanto $a \preceq c$\\\
+
+Antisim\'etrica\\
+$a \preceq b$ y $b \preceq a$\\
+$a^k = b$, $b^l = a$\\
+$(a^k)^l = a$ $\Longrightarrow$ $(b^k)^l = b$
+$\Longrightarrow$ $k * l = 1$ $\Longrightarrow$ $k = 1$ y $l = 1$\\
+Por lo tanto $a = b$.\\\
+
+Reflexiva\\
+$a^1 = a$ y $1 \in N$\\
+$\Longrightarrow$ $a \preceq a$.
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.5] %[Fuente, capÃ­tulo, ejercicio.]
+(1) Da un ejemplo de una relaci\'on en $R$ que sea transitiva y antisim\'etrica pero no sim\'letrica ni reflexiva.\\
+(2) Sea $A$ un conjunto no vac\'io, y sea $R$ una relaci\'on en $A$. Suponemos que $R$ es tanto sim\'etrica como antisim\'etrica. Probar que todo elemento de $A$ est\'a relacionado como m\'animo a s\'i mismo. 
+\end{prob}
+
+\begin{proof}
+$A = \{ 1,2\}$		$(R,\le)$\\
+$R \{(1,2)\}$\\
+$aRb$ y $bRa$ pero $a \neq b$\\
+$aRb$ y $bRc$ $\Longrightarrow$ $aRc$
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.6] %[Fuente, capÃ­tulo, ejercicio.]
+(1) Probar si el COPO tiene un elemento m\'as grande, entonces el elemento m\'as grande es \'único, y si un COPO tiene un elemento m\'as pequeño, entonces el elemento m\'as pequeño es \'único.\\
+(2) Encuentra un ejemplo de un  COPO que tiene tanto un elemento m\'as pequeño como un elemento m\'as grande, un ejemplo que tiene un elemento m\'as pequeño, pero no uno m\'as grande, un ejemplo que tiene un elemento m\'as grande pero no un elemento m\'as chico y un ejemplo que no tiene ninguno.
+\end{prob}
+
+\begin{proof}
+(1) $x$ es m\'aximo en $A$\\
+$x \geq y$, $\forall y \in A$\\
+Sup $X1, X2$ ambos m\'aximos en $A$\\
+$X1 \geq X2$ y $X2 \geq X1$\\
+$X1 = X2$.\\\
+
+(2) A=$(1,2,3,4)$ $\leq$               B= N $\leq$
+\\minimo = 1                             minimo 0 
+\\maximo = 4                            maximo no tiene
+
+Z(negativo)   $\leq$                 Z(positivo) $\leq$             
+\\maximo = -1                           maximo no tiene
+\\minimo no tiene                      minimo 0
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.7] %[Fuente, capÃ­tulo, ejercicio.]
+Probar que el elemento m\'as grande de un COPO es un elemento m\'aximo, y que un elemento m\'as pequeño de un COPO es un elemento minimo. 
+\end{prob}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.13] %[Fuente, capÃ­tulo, ejercicio.]
+Sea $(A, \preceq)$ un COPO, sea $X$ un conjunto y sea $h: X \longrightarrow A$ una funci\'on. Sea $\preceq'$ la relaci\'on en $X$ definida por $x \preceq' y$ si y solo si $h(x) \preceq h(y)$, para todo $x,y \in X$. Probar que $(X , \preceq')$ es un COPO.
+\end{prob}
+
+\begin{proof}
+$(A,R) COPO$\\
+$h: X \longrightarrow A$\\
+$R'$ rel en $X$\\
+$xR'y$ syss\\
+$h(x) R h(y)$\\
+$(x,R')$ COPO\\
+$(A,R)$ $\forall x,y,z \in A$\\
+(1) $xRx$\\
+(2) $xRy$, $yRx$ ent. $x = y$\\
+(3) $xRy$, $yRz$ ent. $xRz$\\\
+
+$h(x) = d$, $x,y,z \in X$\\
+$h(y) = e$, $d,e,k \in A$\\
+$h(z) = k$\\
+$xR'x$ $\Leftrightarrow$ $h(x)Rh(x)$ $\Leftrightarrow$ $dRd$ (Por (1))\\\
+
+$xR'y$, $yR'x$ ent. $x=y$\\
+$h(x)Rh(y)$, $h(y)Rh(x)$\\
+$\Leftrightarrow$ $dRe$, $eRd$\\
+ent. $e=d$ (Por (2))\\\
+
+$xR'y$, $yR'z$ ent $xR'z$\\
+$h(x)Rh(y)$, $h(y)Rh(z)$\\
+$\Leftrightarrow$ $dRe$, $eRk$ (Por (3))\\
+$dRk$ $\Leftrightarrow$ $h(x)Rh(z)$\\
+$\Leftrightarrow$ $xR'z$\\
+Por lo tanto $(x, R')$
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.17] %[Fuente, capÃ­tulo, ejercicio.]
+Sean $(A, \preceq)$ y $(B, \preceq)$ COPOs y sea $f: A \longrightarrow B$ un isomorfismo de orden. Probar que si $\preceq$ es un orden total, entonces tambi\'en es $\preceq'$.\\\\
+\end{prob}
+\begin{proof}
+\end{proof}
+
+
+\begin{prob}[Ejerc\'icio 4.2.1] %[Fuente, capÃ­tulo, ejercicio.]
+Encuentra el rango de cada una de las siguientes funciones.\\
+(1) Sea $f: \Re \longrightarrow \Re$ definida por $f(x) = x^6 - 5$ para toda $x \in \Re$.\\
+(2) Sea $g: \Re \longrightarrow \Re$ definida por $g(x) = x^3 - x^2$ para toda $x \in \Re$\\ 
+(3) Sea $h: \Re \longrightarrow (0, \infty)$ definida por $h(x) = e^(x -1) + 3$ para toda $x \in \Re$\\
+(4) Sea $p: \Re \longrightarrow \Re$ definida por $p(x) = \surd x^4 + 5$ para toda $x \in \Re$\\
+(5) Sea $q: \Re \longrightarrow [-10,10]$ definida por $q(x) = \sin x + \cos x$ para toda $x \in \Re$\\
+\end{prob}
+
+\begin{proof}
+$f: \Re \longrightarrow \Re$\\
+(1) $y = x^6 - 5$\\
+$y + 5 = x^6$, $x^6 - 5 < -5$\\
+$^6\surd y+5 = x$, $x^6<0$\\
+$y+5 \geq 0$\\
+$y \geq -5$\\
+$R = \{ y \in \Re \mid y \geq -5 \}$\\
+$z \in [-5, \infty)$\\\
+
+(2) $f: \Re \longrightarrow \Re$\\
+$y = x^3 - x^2$\\
+$y = x^2 (x-1)$\\
+$y \in \Re$\\\
+
+(3) $f: \Re \longrightarrow (0, \infty)$\\
+$y = e(^x+1) + 3$, $(3, \infty)$\\
+$y - 3 = e(^x-1)$\\
+$ln(y-3) = ln e(^x-1)$\\
+$ln (y-3) = x-1$\\\
+
+(4) $f: \Re \longrightarrow \Re$\\
+$y^2 = x^4 + 5$\\
+$y^2 - 5 = x^4$\\
+$\surd y^2 -5 = x$\\
+$y^2 -5 \geq 0$\\
+$y^2 \geq 5$\\
+$y^2 \geq \surd 5$
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.2.3] %[Fuente, capÃ­tulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 4.2.5] %[Fuente, capÃ­tulo, ejercicio.]
+Sean $X$ y $Y$ conjuntos, sean $A \subseteq C$ y $B \subseteq Y$ subconjuntos y sean $\Pi: X \times Y \longrightarrow X$ y $\Pi: X \times Y \longrightarrow Y$  mapas proyectados como los definidos en la secci\'on 4.1.\\
+(1) Probar que $(\Pi1)^-1 (A) = A \times Y$ y $(\Pi2)^-1 (B)$ $= X \times B$\\
+(2) Probar que $(\Pi1)^-1 (A) \cap (\Pi2)^-1 (B) = A \times B$\\
+(3) Sea $P \subseteq X \times Y$. Es $\Pi1(P) \times \Pi2(P) = P$? Da una prueba o un contraejemplo.\\
+\end{prob}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 4.2.10] %[Fuente, capÃ­tulo, ejercicio.]
+(1) Encuentra un ejemplo de una funci\'on $f: A \longrightarrow B$ y subconjuntos $P,Q \subseteq A$ tal que $P \subseteq \neq Q$, pero que $f(P) = f(Q)$.\\
+(2) Encuentra un ejemplo de una funci\'on $g: C \longrightarrow D$ y subconjuntos $S,T \subseteq D$ tal que $S \subseteq \neq T$, pero que $g^-1(S) = g^-1(T)$.
+\end{prob}
+
+\begin{proof}
+(2) $C, D = \mathbb{R}$,\  $g^{-1}(S) = g^{-1}(T) f(x)=x^{2}$
+
+$S: \mathbb{N}$\\ 
+$\mathbb{N}, \mathbb{R} \subseteq \mathbb{R}$
+
+$T=Z$\\
+$\mathbb{N} \subsetneq  \mathbb{R}$
+
+$g^{-1}(S) = g^{-1}(T)$
+
+$x \in \mathbb{R}$ tales que $f(x)=y$, y $\in \mathbb{N}$
+
+$x = dy$ para alg\'una $y \in \mathbb{N}$
+
+$x^{2} = Z$
+$x= \sqrt{z}$\\
+$(-\infty, 0) = \emptyset$
+
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 4.2.11] %[Fuente, capÃ­tulo, ejercicio.]
+Sean $A$ y $B$ conjuntos, sean $P,Q \subseteq A$ subconjuntos y sea $f: A \longrightarrow B$ una funci\'on.\\
+(1) Probar que $f(P) - f(Q) \subseteq f(P - Q)$.\\
+(2) Es necesariamente el caso que $f(P - Q) \subseteq f(P) - f(Q)$? Da una prueba o un contraejemplo.
+\end{prob}
+
+\begin{proof}
+1) Sea $y \in f(P) - f(Q)$\\
+$y= \{f(x): x \in P\} - \{f(x): x \in Q\}$\\
+$y = f(x)$ tal que $x \in P$ y $x \notin Q$\\
+$y = f(x)$ para alg\'un $x \in P - Q$\\
+$\to$ $y \in \{f(x): x \in P-Q\} = f(P - Q)$\\
+Por lo tanto $y \in f(P-Q)$ $\to f(P) - f(Q) \subseteq f(P - Q)$\\\
+
+2) $P=\{1, 2, 3\}$ , $Q=\{-1, -2, -3\}$\\
+$f(x)= x^\{2\}$\\
+$f(P-Q)= \{-3,-2,-3, 1, 2, 3\}$\\
+$f(P)-f(Q)=\{1, 2, 3\}$\\
+Por lo tanto $f(P-Q) \subset f(P) - f(Q)$
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 4.2.12] %[Fuente, capÃ­tulo, ejercicio.]
+Sean $A$ y $B$ conjuntos, sean $C,D \subseteq B$ subconjuntos y sea $f: A \longrightarrow B$ una funci\'on. Probar que $f^-1(D - C) = f^-1 (D) - f^-1(C)$.
+\end{prob}
+
+\begin{proof}
+$f: A \longrightarrow B$\\ $C,D \subseteq B$\\
+PD $f(^-1) (D - C) = f(^-1)(D) - f(^-1)(C)$\\\
+
+$(\subseteq)$\\
+Sea $a \in f(^-1) (D - C) \Longrightarrow f(a) \in (D-C)$\\
+$\Longrightarrow f(a) \in D$ y $f(a) \notin C$\\
+$\Longrightarrow a \in f(^-1) (D) - f(^-1) (C)$\\\
+
+$(\supseteq)$\\
+Sea $a \in f(^-1) (D) - f(^-1) (C)$\\
+$\Longrightarrow a \in f(^-1) (D)$ y $a \notin f(^-1) (C)$\\
+$\Longrightarrow f(a) \in D$ y $f(a) \notin C$\\
+$\Longrightarrow f(a) \in D - C$\\
+$\Longrightarrow a \in f(^-1)(D-C)$.
+\end{proof}
+
+
+\begin{prob}[Ejerc\'icio 4.3.3] %[Fuente, capÃ­tulo, ejercicio.]
+Sea $f, g: \Re \longrightarrow \Re$ definida por\\
+$f(x) = ( 1 - 2x, si x \geq 0),  f(x)(|x|, si x < 0)$\\
+$g(x)=( 3x, si x \geq 0)  g(x)(x-1, si x < 0)$\\
+Encuentra $fog$ y $gof$
+\end{prob}
+
+\begin{proof}
+Cuando $x \geq 0$\\
+$f(x) = 1-2x$\\
+$g(x) = 3x$\\
+$fog = f(g(x)) = 1 - 2(3x)$\\
+$gof = g(f(x)) = 3(1-2x)$\\\
+
+Cuando $ x < 0$\\
+$fog = f(g(x)) = |x-1|$\\
+$gof = g(f(x)) = |x|-1$\\
+$fog = ( 1-6x \mid x \geq 0$, $|x-1| x < 0)$\\
+$gof = (3-6x \mid x \geq 0$, $|x|-1 x < 0)$.
+
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.3.5] %[Fuente, capÃ­tulo, ejercicio.]
+Sean A y B conjuntos, sea $U \subseteq A$ y $V \subseteq C$ subconjuntos, y sea $f: A \longrightarrow B$ y  $g: B \longrightarrow C$ funciones. Probar que:\\
+$(gof) (U) = g(f(U))$ y $(gof)^{-1}(V) = f^{-1}(g^{-1}(V))$.
+\end{prob}
+
+\begin{proof}
+P.D. $(gof)(u) = g(f(u))$\\ 
+P.D $y \in (gof)(u) \leftrightarrow y \in g(f(u))$\\\
+
+Sea $y \in (gof)(u)$\\
+$y \in (gof)(u) \leftrightarrow y \in (gof)(u): u \in U$\\
+
+$y = (gof)(u)$ para alg\'una $u \in U$\\
+$\leftrightarrow$ $y = g(F(u))$ para alguna $u \in U$\\
+$\leftrightarrow$ $y = g(z) con z = f(u)$ para alguna $u \in U$ªª
+$\leftrightarrow$ $y = g(z)$ para alguna $z \in f(u)$\\
+$\leftrightarrow$ $y \in g(f(u))$\\
+Por lo tanto $(gof)(u) = g(f(u))$.\\\
+
+$V \subseteq C$\\
+$(gof)-1(V) = f-1(g-1(V))$\\
+Sea $y \in (gof)(V) = (x \in A: (gof)(x) \in V)$\\
+$(gof)(y) \in V \leftrightarrow g(f(y)) \in V \leftrightarrow f(x) \in g-1(v)$\\
+$f-1(g-1(u)) = (x \in A: f(x) \in g-1(v))$\\
+$\leftrightarrow$ $y \in f-1(g-1(v))$
+
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.3.6] %[Fuente, capÃ­tulo, ejercicio.]
+Sean $A,B$ y $C$ conjuntos, y sean y sea $f: A \longrightarrow B$ y  $g: B \longrightarrow C$ funciones. Suponer que $f$ y $g$ tienen inversas. Probar que $gof$ tienen inversa, y que $(gof)^{-1} = f^{-1}og^{-1}$
+\end{prob}
+
+\begin{proof}
+Sean $f: A \longrightarrow B$, $g:B \to C$ funciones invertibles\\
+Como $f$ y $g$ tienen inversa\\
+entonces llamemos $f^{-1}:B \to A g^{-1}:C \to B$ inversa.\\
+PD $gof$ tiene inversa\\
+Sea $h =f^{-1}og^{-1}, h:C \to A$\\
+PD $h$ es inversa de $gof$\\
+PD $h(gof) = (gof)oh=Id$  con $c \in C$\\
+$[ho(gof)](c) = [(f-1og-1)o(gof)](c)$\\
+$ \longrightarrow [f^{-1}o(g^{-1}o(gof))](c)$\\
+$\longrightarrow [f^{-1}o(g^{-1}og)of)](c)$\\
+$\longrightarrow (f^{-1}o(Iof))(c)$\\
+$\longrightarrow (f^{-1}of)(c) = I(c) = c$\\
+Por lo tanto $h$ es inversa $(goh)$\\
+$(goh)^{-1} = h$\\
+$\Leftrightarrow$ $(goh)^{-1} = f^{-1}og^{-1}$.
+\end{proof}
+
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.3.7] %[Fuente, capÃ­tulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+(1) $g:[0, \infty) \to \mathbb{R}$ tal que $hog = Id_{[0, \infty)}$\\
+$g_{1}(x) = -x$\\
+$x \in[0, \infty)$\\
+$h(g_{1}(x)) =h(-x) = -(-x) = x$\\
+$g_{2}(x)=x$\\
+$h(g_{2}(x)) = h(x) = x$\\\
+
+(2) $f: \mathbb{R} \to [1, \infty)$\\
+$f(x) = {e^{x}}^{2}$\\
+$g_{1}, g_{2}: [1, \infty) \to \mathbb{R}$\\
+$fog_{1} = Id_{(1, \infty)}$\\
+$fog_{2} = Id[1, \infty)$\\
+$g(x) = log(x^{2})$\\
+$g(x) = \sqrt{log(x)}$\\
+$fog(x)= e^{log(x)} = x$.
+
+\end{proof}
+
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.3.8] %[Fuente, capÃ­tulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+(1) $f(x) = x^{3} + 4$\\
+Encontrar a $g$ tal que $gof(x) = I$\\
+$y=x^{3} + 4 \to \sqrt[3]{x-4} = x$\\
+$g(x) = \sqrt[3]{x-4}$\\
+$gof(x) = g(x^{3} + 4) = \sqrt[3]{(x^{3} + 4)-4} = x = I$\\\
+
+2) $g: \mathbb{R} \to \mathbb{R}$\\
+$g(x) = e^{x} \forall x \in \mathbb{R}$\\
+$h(x) = logx$
+$hog = loge^{x} = x$
+
+\end{proof}
+
+
+
+
+
+\begin{prob}[Ejerc\'icio 4.4.7] %[Fuente, capÃ­tulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+P.D. $f(X) = f(Y) \to x = y$\\
+$x \neq y \to f(x) \neq f(y)$\\
+$Sup. f(x) = f(y) \to A - X = A - Y$\\
+$Si a \in A - X \leftrightarrow a \in A - Y$\\
+$a \in A$ y $a \notin X \leftrightarrow a \in A$ y $a \notin Y$\\
+$a \in A, a \in X^{c} \leftrightarrow a \in A, a \in Y^{c}$\\
+como $X^{c} \subseteq A$, $Y^{c} \subseteq A$\\
+$a \in A \cap X^{c} \leftrightarrow a \in A \cap Y^{c}$\\
+$a \in X^{c} \leftrightarrow a \in Y^{c}$\\
+$a \notin X \leftrightarrow a \notin Y$\\
+$\neg(a \in X) \leftrightarrow \neg(a \notin Y) \to a \in X \leftrightarrow a \in Y$\\
+entonces $x = y$\\
+$\Longrightarrow$ es inyectiva
+
+\end{proof}
+
+
+
+
+
+\end{document}
+
+
+
+

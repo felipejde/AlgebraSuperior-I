@@ -1,0 +1,302 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\newtheorem{prob}{Problema}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+
+\begin{flushright}
+{\large\textbf{Cova} \textnormal{Pacheco}, \textnormal{Felipe de Jes\'us}}
+\end{flushright}
+
+
+
+\begin{prob}[Ejerc\'icio 7.4.2] %[Fuente, capítulo, ejercicio.]
+Es cada una de las siguientes relaciones antisim\'etrica, un orden parcial y/o un orden total?\\
+$C =  \{n \in \mathbb{Z}$ | existe k $\in \mathbb{Z}$ tal que $n = k\};$\\
+$E =  \{n \in \mathbb{Z}$ | existe k $\in \mathbb{Z}$ tal que $n = 2k\};$\\
+$P =  \{n \in \mathbb{Z}$ | $n$ es un n\'umero primo\};\\
+$N =  \{n \in \mathbb{Z}$ | existe k $\in \mathbb{Z}$ tal que $n = k\};$\\
+$S =  \{n \in \mathbb{Z}$ | existe k $\in \mathbb{Z}$ tal que $n = 6k\};$\\
+$D =  \{n \in \mathbb{Z}$ | existe k $\in \mathbb{Z}$ tal que $n = k - 5\};$\\
+$B =  \{n \in \mathbb{Z}$ | n es no negativo\};
+\end{prob}
+
+\begin{proof}
+\end{proof}
+
+\begin{prob}[Ejerc\'icio 3.2.9] %[Fuente, capítulo, ejercicio.]
+Encuentra conjuntos $A$ y $B$ tal que $A \in B$ y $A \subseteq B$.
+\end{prob}
+
+\begin{proof}
+Sea $A = \{\emptyset\}$ y $B = \{\emptyset, \{\emptyset\}\}$\\
+$A$ es un conjunto que contiene al conjunto vac�o\\
+$B$ tiene dos elementos, el conjunto vac�o y el conjunto que contiene al conjunto vac�o
+as� que como todos los elementos de $A$ est\'an en $B$, se cumple que $A \subset B$
+y como $B$ contiene al conjunto que contiene al conjunto vac�o, se concluye que $A \in B$\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.10] %[Fuente, capítulo, ejercicio.]
+Sean $A, B$ y $C$ conjuntos. Suponemos que $A \subseteq B$ y $B \subseteq C$. Probar que $A = B = C$.
+\end{prob}
+
+\begin{proof}
+Por definici\'on de subconjunto:\\
+$A \subseteq B$ para toda $x \in A, x \in B$ (1)\\
+$B \subseteq C$ para toda $x \in B, x \in C$ (2)\\
+De 1 y 2 tenemos que para toda $x \in A, x \in C$  (3) es decir $A \subseteq C$\\
+Como $C \subseteq A$ Para toda $x \in C, x \in A$ (4)\\ 
+de 3 y 4 tenemos que $A = C$\\
+Como $A = C$ 2 puede reescribirse como\\
+$B \subseteq A$ Para toda $x \in B, x \in A$ (5)\\
+entonces de 1 y 5 tenemos que $A = B$ Por lo tanto $A = B = C$\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.11] %[Fuente, capítulo, ejercicio.]
+Sean $A$ y $B$ conjuntos. Probar que no es posible que $A \subsetneq B$ y $B \subseteq A$ ambas sean correctas.
+\end{prob}
+
+\begin{proof}
+Por definici\'on si $A \subsetneq?? B$ Para toda $a \in A, a \in B$ pero existe al menos una $b \in B, b \notin A$ si $B \subseteq A$ para toda $b \in B, b \in A$ lo cual es una contradicci\'on con nuestro enunciado anterior,
+ya que solo sucede que $b \notin A$ o $b \in A$ pero no ambas a la vez.\\ 
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.12] %[Fuente, capítulo, ejercicio.]
+Sean $A y B$ cualesquiera dos conjuntos. Es correcto que uno de $A \subseteq B$ o $A = B$ o $A \supseteq B$ deben ser verdad?. Da una prueba o un contraejemplo.
+\end{prob}
+
+\begin{proof}
+Falso\\
+Contra Ejemplo: Sea $A = \{3,4,5\}$ y $B = \{8,4,1\}$
+$A \nsubseteq B$ ya que no todos los elementos de $A$ est\'an en $B$\\
+Si no se dio la contenci\'on, mucho menos la igualdad, $A \neq B$\\
+$A \nsubseteq B$ ya que no todos los elementos de $B$ est\'an en $A$\\
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.13] %[Fuente, capítulo, ejercicio.]
+Sea $A = \{x,y,z,w\}$. Enlista todos los elementos en  $\wp(A)$.
+\end{prob}
+
+\begin{proof}
+$A = \{x,y,z,w\}$ ent.\\
+$\wp (A)= \{ \emptyset, \{x,y,z,w\}, \{x,y,z\}, \{y,z,w\}, \{z,w,x\}, \{x,y\}, \{x,z\}, \{x,w\},\\
+\{y,z\}, \{y,w\}, \{z,w\}, \{x\}, \{y\}, \{z\}, \{w\} \}$.\\
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.14] %[Fuente, capítulo, ejercicio.]
+Sean $A$ y $B$ conjuntos. Suponemos que $A \subseteq B$. Probar que $\wp(A) \subseteq \wp(B)$
+\end{prob}
+
+\begin{proof}
+Por definici\'on $x \in \wp(A)$ si y solo si $x \subseteq A$\\
+Si $A \subseteq B$ se cumple que todos los elementos de $A$ est\'an en $B$\\
+y como $\wp(B)$ contiene todos los subconjuntos de $B$ quien a su vez contiene todos los elementos\\
+de $A$ se cumple que $\wp(A) \subseteq \wp(B)$.\\
+\end{proof}
+
+
+\begin{prob}[Ejerc\'icio 3.2.16] %[Fuente, capítulo, ejercicio.]
+??????????????????Cu\'ales de los siguientes son verdaderos y cu\'ales falsos
+\end{prob}
+
+\begin{proof}
+
+
+(1) $\{ \emptyset\} \subseteq G$ para todos conjunto en $G$.\\
+	FALSO. Porque el conjunto $G$ no necesariamente tiene al conjunto vac\'io.\\ 
+(2)$\emptyset \subseteq G$ para todo conjunto $G$.\\
+	VERDADERO. Dem: si $\emptyset \subseteq G$ $\exists x \in \emptyset$ tal que $x \notin G $
+	
+
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.5] %[Fuente, capítulo, ejercicio.]
+Dados dos conjuntos $A$ y $B$ los conjuntos $A - B$ y $B - A$ necesariamente disjuntos? Da una prueba o un contraejemplo
+\end{prob}
+
+\begin{proof}
+Para que los conjuntos $A - B$ y $B - A$ sean disjuntos, no deben tener ning\'un elemento en com\'un.\\
+Al no tener elementos en com\'un, la intersecci\'on de ambos conjuntos es el vac\'io\\
+$(A - B) \cap (B - A) = \emptyset$\\
+$x \in (A - B)$ y las $x \in (B - A)$ por definici\'on de intersecci\'on\\
+$x \in A$, $x \notin B$ y las $x \in B$, $\notin A$.\\
+no hay ninguna $x$ que cumpla estar y no estar en $A$, lo mismo cumple para $B$ por lo que\\
+concluimos que $(A - B) \cap (B - A) = \emptyset$\\
+por lo que $A - B$ y $B - A$ son necesariamente disjuntos.\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.9] %[Fuente, capítulo, ejercicio.]
+Sean $A$ y $B$ conjuntos. Prueba que $(A \cup B) - A = B - (A \cap B)$
+\end{prob}
+
+\begin{proof}
+$(A \cup B) - A$ son todas las $x$ que est\'an en $A$ o en $B$ que no est\'an en $A$\\ 
+Por lo que solo nos quedan las $x$ que est\'an en $B$ que no est\'an en $A$, $B - A$\\
+Las $x$ que est\'an tanto en $A$ como en $B$ son las $x \in A$ y $x \in B$
+Como $B - A$ son las $x$ que no est\'en en $A$, quitamos de $B$ las $x$ que est\'en en $A$ y en $B$\\ $x \in B$, $x \notin ( x \in A$ y $x \in B )$\\
+Por definici\'on de intersecci\'on\\
+$x \in B, x \notin ( A \cap B )$\\
+Por definici\'on de Diferencia\\
+$B - (A \cap B)$\\
+Por lo tanto $(A \cup B) - A = B - (A \cap B)$\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.10] %[Fuente, capítulo, ejercicio.]
+Sean $A$ y $B$ y $C$ conjuntos. Suponemos que $C \subset A \cup B$, y que\\
+$C \cap A = \emptyset$. Probar que $C \subseteq B$
+\end{prob}
+
+\begin{proof}
+Si $x \in C$ y $C \subset A \cup B$\\
+$x \in A o B$ por definici\'on de subconjunto y de uni\'on\\
+Si ademas $C \cap A = \emptyset$ no existe $x \in C$ y $x \in A$\\
+Como para toda $x \in C, x \notin A$\\
+tenemos que $\forall x \in C, x \notin A, x \in A$ o $x \in B$\\
+Como no existen x que est\'en y no est\'en simult\'aneamente en $A$ nos queda $\forall x \in C, x \in B$ que\\
+por definici\'on de subconjunto es $C \subseteq B$\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.11] %[Fuente, capítulo, ejercicio.]
+Sea $X$ un conjunto, y sea $A, B, C \subseteq X$ son subconjuntos. Supongamos que $A \cap B =
+A \cap C$, y que $(X - A) \cap B = (X - A) \cap C$. Probar que $B = C$.
+\end{prob}
+
+\begin{proof}
+Tenemos $( X - A ) \cap B = ( X - A ) \cap C$\\
+como $B \subseteq X, (X - A) \cap B = B - A$\\
+como $C \subseteq X, (X - A) \cap C = C - A$\\
+$B - A = C - A$\\
+$(B - A) \cup (A \cap B) = B$ y $(C - A) \cup (A \cap C) = C$\\
+Como $A \cap B = A \cap C y B - A = C - A$\\
+$(B - A) \cup (A \cap B) = (C - A) \cup (A \cap C)$\\
+Por lo tanto $B = C$.\\
+\end{proof}
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.12] %[Fuente, capítulo, ejercicio.]
+Sean $A, B$ y $C$ conjuntos. Provar que $(A - B) \cap C = (A \cap C) - B = (A \cap C) - (B \cap C)$.	
+\end{prob}
+
+\begin{proof}
+Sea $x \in (A - B) \cap C$\\
+$x \in A - B \rightarrow x \in A$ y $x \notin B$ y $x \in C$\\
+como $x \in A$ y $x \in C$ \\
+$x \in A \cap C$\\
+y como $x \notin B$
+Por lo tanto $x \in (A \cap C) - B$\\\\
+$x \in (A \cap C) - B$\\
+$x \in A$ y $x \in C$ y $x \notin B$\\
+$x \in A-B$ y $x \in C$\\
+Por lo tanto $x \in (A-B) \cap C$\\\\
+$x \in (A \cap C) - (B \cap C)$\\
+$x \in (A \cap C)$ y $x \notin (B \cap C)$\\
+$x \in A$ y $x \in C$ y $x \notin B$ o $x \notin C$\\
+$x \in A$ y $x \in C$ y $x \notin B$\\
+Por lo tanto $x \in (A \cap B) - B$\\\\
+$x \in (A \cap C) - B$\\
+$x \in A \cap C$ y $x \notin B$\\
+$x \in A$ y $x \in C$ y $x \notin B \cap C$\\
+Por lo tanto $x \in (A \cap C) - (B \cap C)$.
+
+
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.16] %[Fuente, capítulo, ejercicio.]
+Prueba o encuentra un contraejemplo de la siguiente declaraci\'on. Sean $A, B, C$ conjuntos. Entonces $(A \cup C) - B = (A - B) \cup (C - B)$.
+\end{prob}
+
+\begin{proof}
+Sea $x ? ((A ? C) ? B)$\\
+son las $x \in A$ o las $x \in C$ tal que $x \notin B$\\
+las $x \in A$ tal que $x \notin B$, son las $x \in (A - B)$\\
+y las $x \in C$ y que $x \notin B$, son las $x \in (C - B)$\\
+por lo que las $x$ que est\'an en $(A - B)$ o en $(C  ? B)$\\
+son las $x \in (A - B) \cup (C - B)$ por definici\'on de uni\'on
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.3.5] %[Fuente, capítulo, ejercicio.]
+Enlista todos los elementos de cada uno de los siguientes conjuntos.
+(1) $\wp(\wp(\emptyset))$.  (2) $\wp(\wp({\emptyset}))$.
+\end{prob}
+
+\begin{proof}
+(1)
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio 3.2.16] %[Fuente, capítulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+Escriba aqu\'i su segunda demostraci\'on.
+\end{proof}
+
+
+
+
+\begin{prob}[Ejerc\'icio] %[Fuente, capítulo, ejercicio.]
+\end{prob}
+
+\begin{proof}
+Escriba aqu\'i su segunda demostraci\'on.
+\end{proof}
+
+
+\end{document}
+
+
+
+
