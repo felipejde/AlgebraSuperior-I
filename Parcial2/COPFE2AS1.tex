@@ -1,0 +1,116 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\newtheorem{prob}{Problema}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{flushleft}
+{\large\textbf{Ex\'amen 2}}
+\end{flushleft}
+
+
+\begin{flushright}
+{\large\textbf{Cova} \textnormal{Pacheco}, \textnormal{Felipe de Jes\'us}}
+\end{flushright}
+
+
+
+\begin{prob} %[Fuente, capítulo, ejercicio.]
+Considere $f \subseteq \mathbb{R}$ x $\mathbb{R}$ dada por\\
+$(x,y) \in f$ si y s\'olo si $y = x^2$ si $x \ge 0$, $y = x$ si $x \le 0$\\
+Conteste argumentando ampliamente las siguientes preguntas:\\
+i. $f$ es reflexiva?\\\
+ii. $f$ es sim\'etrica?\\\
+iii. $f$ es transitiva?\\\
+iv. $f$ es de equivalencia?\\\
+v. Calcule $f[1], [1]f, f[-2]$ y $[-2]f$.\\\
+vi. $f$ es funci\'on?\\\
+vii. $f$ es inyectiva?\\\
+viii. $f$ es suprayectiva?\\\
+ix. $f$ es biyectiva?\\\
+x. Calcule $f[[-1,1]], f^{-1}[f[[-1,1]]], f^{-1}[[-1,1]], f[f[^{-1}[-1,1]]]$ considerando al\\
+ intervalo $[-1,1]$ como uni\'on de los intervalos $[-1,0]$ y $[0,1]$.\\\
+\end{prob}
+
+\begin{proof} i) Reflexiva:\\
+La funci\'on no es reflexiva, ya que por ejemplo $f(2) = 2^2 = 4$ y $f(4) = 4^2 = 16$\\
+Por lo tanto no es reflexiva.\\
+\end{proof}
+
+
+\begin{proof} ii) Sim\'etrica:\\
+Para toda $x, f(-x) = f^{-1}(x)$, entonces\\
+$f(-2) = -2$ y $f(2) = 2^2 = 4$\\
+\end{proof}
+
+
+\begin{proof} iii) Transitiva:\\
+$f(2*3) = (2*3)^2 = 6^2 = 36$\\
+$f(3*1) = (3*1)^2 = 3^2 = 9$, ent. $f(2*1) = (2*1)^2 = 4$\\
+i.e. la funci\'on no cumple  la propiedad de la transitividad.\\
+Como por ejemplo\\
+$f(2) = 2^2 = 4$ y $f(4) = 4^2 = 16$\\
+$f(2) \neq f(16)$\\
+\end{proof}
+
+
+\begin{proof} iv) Equivalencia:\\
+No es de equivalencia, ya que no cumple con ninguna de las tres propiedades, reflexiva, sim\'etrica y transitiva.\\
+\end{proof}
+
+
+\begin{proof} vi)\\
+Si es funci\'on, porque es una relaci\'on y cumple que es inyectiva\\
+porque para toda $x \in \mathbb{R}, f(x) = y$ y $y \in \mathbb{R}$\\
+\end{proof}
+
+
+\begin{proof} vii)\\
+Es inyectiva, porque para toda $x \in \mathbb{R}$ existe un \'unico $y \in \mathbb{R}$\\
+que es diferente de $f(x) = y$\\
+y por lo tanto $f(x_0) = f(x_1)$ y a cada valor de $y$ le corresponde uno y s\'olo un valor de $x$\\
+\end{proof}
+
+
+\begin{proof} viii)\\
+Si es suprayectiva, porque el rango de la funci\'on es igual al dominio. En otras palabras, todo $y$ tiene un valor en el dominio.\\
+\end{proof}
+
+
+\begin{proof} ix)\\
+Si es biyectiva porque cumple que es inyectiva y suprayectiva.\\
+\end{proof}
+
+\begin{prob} %[Fuente, capítulo, ejercicio.]
+Pregunta de rescate:\\
+Con la reforma pol\'itica de la Ciudad de M\'exico, los habitantes podr\'an elegir a sus autoridades municipales, antes delegacionales. Ser\'a esta la primera vez que los habitantes de la Ciudad de M\'exico podr\'an elegir a sus autoridades municipales?
+\end{prob}
+
+\begin{proof}
+No, no ser\'a la primera vez, hace veinte a�os ya suced\'ia.
+\end{proof}
+
+
+
+\end{document}

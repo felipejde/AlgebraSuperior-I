@@ -1,0 +1,108 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\newtheorem{prob}{Problema}
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\pagestyle{empty}
+
+
+\begin{document}
+
+
+\begin{flushright}
+{\large\textbf{Ex\'amen 1} \textnormal{Cova Pacheco Felipe de Jes\'us}, \textnormal{Jueves 25 de febrero de 2016}}
+\end{flushright}
+
+
+\begin{prob} %[Fuente, cap√≠tulo, ejercicio.]
+Sean $A$ y $B$ conjuntos, demuestre que:\\\
+a) $\wp (A) \cup \wp (B) \subseteq \wp (A \cup B)$ y es estricta si $A \nsubseteq B$ o $B \nsubseteq A$.\\
+b) $\wp(A - B) - \{ \emptyset \} \subseteq \wp(A) - \wp(B)$ y es estricta si $A \nsubseteq B$
+\end{prob}
+
+\begin{proof}
+a) Sea $x \in \wp(A) \cup \wp(B)$\\
+$x \in \wp(A)$ \'o $x \in \wp(B)$\\
+entonces $x \subseteq A$ \'o $x \subseteq B$\\
+entonces $x \subseteq A \cup B$\\
+$x \in \wp(A \cup B)$\\
+Por lo tanto $\wp(A) \cup \wp(B) \subseteq \wp(A \cup B)$\\\
+
+b) Sea $x \in \wp(A-B) - \{ \emptyset \}$\\
+ent. $x \in \wp(A-B)$ y $x \notin \{ \emptyset \}$ entonces $x \neq \emptyset$\\
+ent. $x \subseteq A-B$\\
+ent. $x \subseteq A$ y como $x \neq \emptyset$ puede pasar que $x \nsubseteq B$\\
+$x \in \wp(A)$ y $w \notin \wp(B)$\\
+$x \in \wp(A) - \wp(B)$\\
+Por lo tanto $\wp(A-B) - \{ \emptyset \} \subseteq \wp(A) - \wp(B) $\\\\
+\end{proof}
+
+
+
+\begin{prob} %[Fuente, cap√≠tulo, ejercicio.]
+Para n\'umeros reales $a, b$ y $c$ se sabe que $a-(b-c) = (a-b)+c$. Considere $A, B, C$ conjuntos, encuentre y demuestre una f\'ormula, equivalente a la de n\'umeros reales, para\\
+    $A-(B-C)$.
+\end{prob}
+
+\begin{proof}
+$\subseteq )$\\
+Sea $x \in A-(B-C)$\\
+$x \in A$ y $x \notin (B-C)$\\
+ent. \'o $x \in B y x \in C$ \'o $x \notin B y x \notin C$ \'o $x \notin B y x \in C$\\
+Caso 1:\\
+$x \in A$ y $x \in B$ y $x \in C$\\
+ent. $x \notin A-B$\\
+$x \notin (A-B) \cup C$\\
+Caso 2:\\
+$x \in A$ y $x \notin B$\\
+$x \in (A-B) \cup C$\\\
+
+$\supseteq )$\\
+Sea $x \in (A-B) \cup C$\\
+$x \in (A-B)$ \'o $x \in C$\\
+$\bullet$ Si $x \in A-B$\\
+entonces $x \in A$ y $x \notin B$\\
+Como $x \notin B$ entonces $x \notin B-C$\\
+entonces $x \in A$ y $x \notin (B-C)$ entonces $x \in A - (B-C)$\\
+$\bullet$ Si $x \in C$\\
+$\bullet$ Si $x \in B$ ent $x \notin B-C$\\
+$\bullet$ Si $x \in A$ ent. $x \in A-(B-C)$\\
+$\bullet$ Si $x \notin A$ ent. $x \notin A-(B-C)$\\
+$\bullet$ Si $x \notin B$ ent. $x \notin B-C$\\
+$\bullet$ Si $x \in A$ ent. $x \in A-(B-C)$\\
+$\bullet$ Si $x \notin A$ ent. $x \notin A-(B-C)$\\\\
+\end{proof}
+
+
+\begin{prob} %[Fuente, cap√≠tulo, ejercicio.]
+Pregunta de rescate: En los \'ultimos 153 aÒos, el gobierno mexicano ha mandado dos notas diplom\'aticas a El Vaticano, diga cuales fueron los sucesos que provocaron dichas notas.
+\end{prob}
+
+\begin{proof}
+Gobierno de Benito Ju\'arez: Extinci\'on de las comunidades religiosas en M\'exico.\\
+Gobierno de Enrique PeÒa Nieto: No a la mexicanizaci\'on en Argentina.
+\end{proof}
+
+
+\end{document}
+
+
+
+
